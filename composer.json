@@ -1,5 +1,5 @@
 {
-    "name": "chasegiunta/scss",
+    "name": "winterpk/scss",
     "description": "Compiler for SCSS",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -11,8 +11,8 @@
         "scss"
     ],
     "support": {
-        "docs": "https://github.com/chasegiunta/scss/blob/master/README.md",
-        "issues": "https://github.com/chasegiunta/scss/issues"
+        "docs": "https://github.com/winterpk/scss/blob/master/README.md",
+        "issues": "https://github.com/winterpk/scss/issues"
     },
     "license": "MIT",
     "authors": [
