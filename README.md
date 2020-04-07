@@ -1,4 +1,4 @@
-# SCSS plugin for Craft CMS 3.x
+# SCSS plugin for Craft CMS 3.x - MODIFIED
 
 Compile SCSS to CSS in your templates
 
