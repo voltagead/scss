@@ -8,11 +8,11 @@
  * @copyright Copyright (c) 2018 Chase Giunta
  */
 
-namespace chasegiunta\scss;
+namespace winterpk\scss;
 
-use chasegiunta\scss\services\ScssService as ScssServiceService;
-use chasegiunta\scss\twigextensions\ScssTwigExtension;
-use chasegiunta\scss\models\Settings;
+use winterpk\scss\services\ScssService as ScssServiceService;
+use winterpk\scss\twigextensions\ScssTwigExtension;
+use winterpk\scss\models\Settings;
 
 
 use Craft;
@@ -79,6 +79,8 @@ class Scss extends Plugin
      */
     public function init()
     {
+        echo 'xfngr';
+        exit;
         parent::init();
         self::$plugin = $this;
 

@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Chase Giunta
  */
 
-namespace chasegiunta\scss\models;
+namespace winterpk\scss\models;
 
-use chasegiunta\scss\Scss;
+use winterpk\scss\Scss;
 
 use Craft;
 use craft\base\Model;
