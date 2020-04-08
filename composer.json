@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-          "chasegiunta\\scss\\": "src/"
+          "winterpk\\scss\\": "src/"
         }
     },
     "extra": {
@@ -35,10 +35,10 @@
         "handle": "scss",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/chasegiunta/scss/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/winterpk/scss/master/CHANGELOG.md",
         "components": {
-            "scssService": "chasegiunta\\scss\\services\\ScssService"
+            "scssService": "winterpk\\scss\\services\\ScssService"
         },
-        "class": "chasegiunta\\scss\\Scss"
+        "class": "winterpk\\scss\\Scss"
     }
 }
