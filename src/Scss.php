@@ -79,8 +79,6 @@ class Scss extends Plugin
      */
     public function init()
     {
-        echo 'xfngr';
-        exit;
         parent::init();
         self::$plugin = $this;
 

@@ -7,17 +7,14 @@
  * @link      https://chasegiunta.com
  * @copyright Copyright (c) 2018 Chase Giunta
  */
-
 namespace winterpk\scss\services;
 
-use winterpk\scss\Scss;
-
 use Craft;
+use winterpk\scss\Scss;
 use craft\base\Component;
-
-use Leafo\ScssPhp\Compiler;
-
-use yii\web\View;
+use ScssPhp\ScssPhp\Compiler;
+use yii\base\Event;
+use craft\web\View;
 
 /**
  * ScssService Service
@@ -34,12 +31,30 @@ use yii\web\View;
  */
 class ScssService extends Component
 {
+    public $scss = '';
+    public $attributes = '';
+
+    public function __construct() {
+        Event::on(
+            View::class,
+            View::EVENT_AFTER_RENDER_TEMPLATE,
+            function() {
+                $this->afterTemplateRender();
+            }
+        );
+    }
+
     // Public Methods
     // =========================================================================
 
     public function scss($scss = "", $attributes = "")
     {
-        $attributes = unserialize($attributes);
+        $this->scss .= $scss;
+        $this->attributes .= $attributes;
+    }
+
+    public function afterTemplateRender() {
+        $attributes = unserialize($this->attributes);
         $scssphp = new Compiler();
 
         if (Craft::$app->getConfig()->general->devMode) {
@@ -64,7 +79,7 @@ class ScssService extends Component
             $outputFormat = 'Nested';
         }
 
-        $scssphp->setFormatter("Leafo\ScssPhp\Formatter\\$outputFormat");
+        $scssphp->setFormatter("ScssPhp\ScssPhp\Formatter\\$outputFormat");
 
         $rootPath = Craft::getAlias('@root');
         $scssphp->setImportPaths($rootPath);
@@ -73,10 +88,7 @@ class ScssService extends Component
             $scssphp->setLineNumberStyle(Compiler::LINE_COMMENTS);
         }
 
-        $compiled = $scssphp->compile($scss);
-
-        $result = $compiled;
-
-        Craft::$app->view->registerCss($result);
+        $compiled = $scssphp->compile($this->scss);
+        Craft::$app->view->registerCss($compiled);
     }
 }

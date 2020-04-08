@@ -18,7 +18,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require chasegiunta/scss
+        composer require winterpk/scss
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for SCSS.
 
@@ -126,5 +126,3 @@ Note: this only works with the Expanded, Nested, and Compact output formats.
 ### @import
 
 When you import a file using the `@import` directive, the current path of your Craft install is used as the search path.
-
-Brought to you by [Chase Giunta](https://chasegiunta.com)
