@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Chase Giunta
  */
 
-namespace winterpk\scss\twigextensions;
+namespace chasegiunta\scss\twigextensions;
 
-use winterpk\scss\twigextensions\ScssNode;
+use chasegiunta\scss\twigextensions\ScssNode;
 
 /**
  * SCSS twig token parser

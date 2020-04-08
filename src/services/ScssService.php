@@ -7,10 +7,10 @@
  * @link      https://chasegiunta.com
  * @copyright Copyright (c) 2018 Chase Giunta
  */
-namespace winterpk\scss\services;
+namespace chasegiunta\scss\services;
 
 use Craft;
-use winterpk\scss\Scss;
+use chasegiunta\scss\Scss;
 use craft\base\Component;
 use ScssPhp\ScssPhp\Compiler;
 use yii\base\Event;

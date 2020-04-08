@@ -8,11 +8,11 @@
  * @copyright Copyright (c) 2018 Chase Giunta
  */
 
-namespace winterpk\scss;
+namespace chasegiunta\scss;
 
-use winterpk\scss\services\ScssService as ScssServiceService;
-use winterpk\scss\twigextensions\ScssTwigExtension;
-use winterpk\scss\models\Settings;
+use chasegiunta\scss\services\ScssService as ScssServiceService;
+use chasegiunta\scss\twigextensions\ScssTwigExtension;
+use chasegiunta\scss\models\Settings;
 
 
 use Craft;
