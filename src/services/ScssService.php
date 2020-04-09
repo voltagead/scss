@@ -16,6 +16,7 @@ use ScssPhp\ScssPhp\Compiler;
 use yii\base\Event;
 use craft\web\View;
 use Padaliyajay\PHPAutoprefixer\Autoprefixer;
+use MatthiasMullie\Minify;
 
 /**
  * ScssService Service
@@ -57,7 +58,7 @@ class ScssService extends Component
     public function afterTemplateRender() {
         $attributes = unserialize($this->attributes);
         $scssphp = new Compiler();
-
+        $devMode = ( getEnv('ENVIRONMENT') === 'dev' ? true : false );
 
         if (Craft::$app->getConfig()->general->devMode) {
             $outputFormat = Scss::$plugin->getSettings()->devModeOutputFormat;
@@ -93,6 +94,12 @@ class ScssService extends Component
         $compiled = $scssphp->compile($this->scss);
         $autoprefixer = new Autoprefixer($compiled);
         $prefixed = $autoprefixer->compile();
-        Craft::$app->view->registerCss($prefixed);
+        if (! $devMode ) {
+            $minifier = new Minify\CSS($prefixed);
+            $minified = $minifier->minify();
+            Craft::$app->view->registerCss($minified);
+        } else {
+            Craft::$app->view->registerCss($prefixed);
+        }
     }
 }
