@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Scss plugin for Craft CMS 3.x
@@ -13,6 +14,7 @@ use Craft;
 use chasegiunta\scss\Scss;
 use craft\base\Component;
 use ScssPhp\ScssPhp\Compiler;
+
 use yii\base\Event;
 use craft\web\View;
 
