@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3df397401c00023e0f2c6519bd6fd63e",
-    "content-hash": "3f40d54ea0a14062f828f05cb6c7539e",
+    "hash": "ec57a62dc701e8348deb485c287af1e0",
+    "content-hash": "b1831032fbcc2f9399eb4f3f6bbf7250",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -69,16 +69,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/95c63ab2117a72f48f5a55da9740a3273d45b7fd",
+                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2020-01-13 10:02:55"
+            "time": "2020-04-08 08:27:21"
         },
         {
             "name": "composer/composer",
@@ -3965,6 +3965,48 @@
             "time": "2020-02-11 15:31:23"
         },
         {
+            "name": "vladkens/autoprefixer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vladkens/autoprefixer-php.git",
+                "reference": "72564d737c43bdaf206d5f2a83d30ddd042ec6b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vladkens/autoprefixer-php/zipball/72564d737c43bdaf206d5f2a83d30ddd042ec6b0",
+                "reference": "72564d737c43bdaf206d5f2a83d30ddd042ec6b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vlad Pronsky",
+                    "email": "vladkens@yandex.ru"
+                }
+            ],
+            "description": "Run Autoprefixer using node.js in you php.",
+            "keywords": [
+                "Node.js",
+                "autoprefixer",
+                "css",
+                "prefixes"
+            ],
+            "time": "2019-03-30 20:28:21"
+        },
+        {
             "name": "voku/anti-xss",
             "version": "4.1.24",
             "source": {
@@ -4976,7 +5018,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vladkens/autoprefixer": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
