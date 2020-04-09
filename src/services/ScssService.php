@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Scss plugin for Craft CMS 3.x
@@ -14,7 +13,6 @@ use Craft;
 use chasegiunta\scss\Scss;
 use craft\base\Component;
 use ScssPhp\ScssPhp\Compiler;
-
 use yii\base\Event;
 use craft\web\View;
 
@@ -58,7 +56,7 @@ class ScssService extends Component
     public function afterTemplateRender() {
         $attributes = unserialize($this->attributes);
         $scssphp = new Compiler();
-
+        $autoprefixer = new \Autoprefixer();
         if (Craft::$app->getConfig()->general->devMode) {
             $outputFormat = Scss::$plugin->getSettings()->devModeOutputFormat;
         } else {
@@ -91,6 +89,7 @@ class ScssService extends Component
         }
 
         $compiled = $scssphp->compile($this->scss);
+        $prefixed = $autoprefixer->compile($compiled);
         Craft::$app->view->registerCss($compiled);
     }
 }
