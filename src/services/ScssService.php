@@ -56,7 +56,7 @@ class ScssService extends Component
     public function afterTemplateRender() {
         $attributes = unserialize($this->attributes);
         $scssphp = new Compiler();
-        $autoprefixer = new \Autoprefixer();
+        $autoprefixer = new \Autoprefixer(['last 2 versions', 'ie >= 9', 'ios >= 7']);
         if (Craft::$app->getConfig()->general->devMode) {
             $outputFormat = Scss::$plugin->getSettings()->devModeOutputFormat;
         } else {
