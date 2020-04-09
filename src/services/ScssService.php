@@ -91,7 +91,8 @@ class ScssService extends Component
         }
 
         $compiled = $scssphp->compile($this->scss);
-        $prefixed = new Autoprefixer($compiled);
+        $autoprefixer = new Autoprefixer($compiled);
+        $prefixed = $autoprefixer->compile();
         Craft::$app->view->registerCss($prefixed);
     }
 }
