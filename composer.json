@@ -28,7 +28,7 @@
     "require": {
         "craftcms/cms": "^3.0.0",
         "scssphp/scssphp": "^1.0",
-        "vladkens/autoprefixer": "^0.1.0"
+        "padaliyajay/php-autoprefixer": "^1.2"
     },
     "autoload": {
         "psr-4": {

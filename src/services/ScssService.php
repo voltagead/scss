@@ -15,6 +15,7 @@ use craft\base\Component;
 use ScssPhp\ScssPhp\Compiler;
 use yii\base\Event;
 use craft\web\View;
+use Padaliyajay\PHPAutoprefixer\Autoprefixer;
 
 /**
  * ScssService Service
@@ -56,7 +57,8 @@ class ScssService extends Component
     public function afterTemplateRender() {
         $attributes = unserialize($this->attributes);
         $scssphp = new Compiler();
-        $autoprefixer = new \Autoprefixer(['last 2 versions', 'ie >= 9', 'ios >= 7']);
+
+
         if (Craft::$app->getConfig()->general->devMode) {
             $outputFormat = Scss::$plugin->getSettings()->devModeOutputFormat;
         } else {
@@ -89,7 +91,7 @@ class ScssService extends Component
         }
 
         $compiled = $scssphp->compile($this->scss);
-        $prefixed = $autoprefixer->compile($compiled);
-        Craft::$app->view->registerCss($compiled);
+        $prefixed = new Autoprefixer($compiled);
+        Craft::$app->view->registerCss($prefixed);
     }
 }
