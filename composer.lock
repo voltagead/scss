@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec57a62dc701e8348deb485c287af1e0",
-    "content-hash": "b1831032fbcc2f9399eb4f3f6bbf7250",
+    "hash": "a995fea14615b964fec2bb31175145a0",
+    "content-hash": "7dc60de1cd3f23c9fb9db0a6e995fc5a",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -3966,16 +3966,16 @@
         },
         {
             "name": "vladkens/autoprefixer",
-            "version": "dev-master",
+            "version": "v0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vladkens/autoprefixer-php.git",
-                "reference": "72564d737c43bdaf206d5f2a83d30ddd042ec6b0"
+                "reference": "a89553d6b8df8374c78b3d2e80221d771bf14814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vladkens/autoprefixer-php/zipball/72564d737c43bdaf206d5f2a83d30ddd042ec6b0",
-                "reference": "72564d737c43bdaf206d5f2a83d30ddd042ec6b0",
+                "url": "https://api.github.com/repos/vladkens/autoprefixer-php/zipball/a89553d6b8df8374c78b3d2e80221d771bf14814",
+                "reference": "a89553d6b8df8374c78b3d2e80221d771bf14814",
                 "shasum": ""
             },
             "require": {
@@ -4004,7 +4004,7 @@
                 "css",
                 "prefixes"
             ],
-            "time": "2019-03-30 20:28:21"
+            "time": "2015-01-30 11:55:19"
         },
         {
             "name": "voku/anti-xss",
@@ -5018,9 +5018,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "vladkens/autoprefixer": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
